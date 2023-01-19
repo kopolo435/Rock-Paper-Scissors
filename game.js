@@ -9,6 +9,7 @@ function getComputerChoice(){
             return 'Scissors'
     }
 }
+
 function playRound(playerSelection,computerSelection){
     playerSelection= playerSelection.toLowerCase();
     computerSelection= computerSelection.toLowerCase();
@@ -20,10 +21,10 @@ function playRound(playerSelection,computerSelection){
     {
         if(computerSelection=="paper")
         {
-            return "You Lose! Paper beats Rock"
+            return `You choose ${playerSelection} and the computer ${computerSelection}. You Lose!`
         }
         else{
-            return "You Win! Rock beats Scissors"
+            return `you choose ${playerSelection} and the computer ${computerSelection}. You Win!`
         }
         
     }
@@ -31,19 +32,19 @@ function playRound(playerSelection,computerSelection){
     {
         if(computerSelection=="rock")
         {
-            return "You Win! Paper beats Rock"
+            return `You choose ${playerSelection} and the computer ${computerSelection}. You Win!`
         }
         else{
-            return "You Lose! Scissors beats Paper"
+            return `You choose ${playerSelection} and the computer ${computerSelection}. You Lose!`
         }
     }
     else if(playerSelection=="scissors"){
         if(computerSelection=="paper")
         {
-            return"You Win! Scissors beats paper"
+            return`You choose ${playerSelection} and the computer ${computerSelection}. You Win!`
         }
         else{
-            return "You Lose! Rock beats Scissors"
+            return `you choose ${playerSelection} and the computer ${computerSelection}. You Lose!`
         }
     }
     else{
@@ -54,3 +55,14 @@ function playRound(playerSelection,computerSelection){
 
 }
 
+function game(){
+    for(let i=0;i<5;i++)
+    {
+        playerSelection=prompt("Enter rock,paper or scissors to play");
+        computerSelection=getComputerChoice();
+        console.log(playRound(playerSelection,computerSelection));
+
+    }
+}
+
+game();
