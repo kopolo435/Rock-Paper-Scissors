@@ -58,8 +58,14 @@ function playRound(playerSelection,computerSelection){
 function PlayGame(){
     let computerChoice=getComputerChoice();
     console.log(playRound(this.classList[0],computerChoice));
+    result.textContent=playRound(this.classList[0],computerChoice); //Accesa a una vatiable global para poder devolver el resultado
+  
 }
+
 const choices=document.querySelectorAll('button');
+const result=document.querySelector('.result');
 
-choices.forEach(choice =>choice.addEventListener('click',PlayGame));
 
+for (const array of choices){
+    array.addEventListener('click',PlayGame)
+}
