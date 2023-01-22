@@ -55,14 +55,11 @@ function playRound(playerSelection,computerSelection){
 
 }
 
-function game(){
-    for(let i=0;i<5;i++)
-    {
-        playerSelection=prompt("Enter rock,paper or scissors to play");
-        computerSelection=getComputerChoice();
-        console.log(playRound(playerSelection,computerSelection));
-
-    }
+function PlayGame(){
+    let computerChoice=getComputerChoice();
+    console.log(playRound(this.classList[0],computerChoice));
 }
+const choices=document.querySelectorAll('button');
 
-game();
+choices.forEach(choice =>choice.addEventListener('click',PlayGame));
+
