@@ -57,7 +57,6 @@ function playRound(playerSelection,computerSelection){
 
 function PlayGame(){
     let computerChoice=getComputerChoice();
-    console.log(playRound(this.classList[0],computerChoice));
     result.textContent=playRound(this.classList[0],computerChoice); //Accesa a una vatiable global para poder devolver el resultado
   
 }
