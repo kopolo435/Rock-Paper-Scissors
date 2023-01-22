@@ -65,6 +65,4 @@ const choices=document.querySelectorAll('button');
 const result=document.querySelector('.result');
 
 
-for (const array of choices){
-    array.addEventListener('click',PlayGame)
-}
+choices.forEach(choice => choice.addEventListener('click',PlayGame));
