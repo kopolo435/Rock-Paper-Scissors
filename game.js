@@ -15,7 +15,7 @@ function playRound(playerSelection,computerSelection){
     computerSelection= computerSelection.toLowerCase();
     
     if(playerSelection==computerSelection){
-        return `Draw! you choose ${playerSelection} and the computer ${computerSelection} `
+        return `You choose ${playerSelection} and the computer ${computerSelection} Draw!`
     }
     else if(playerSelection=="rock")
     {
@@ -55,14 +55,35 @@ function playRound(playerSelection,computerSelection){
 
 }
 
-function PlayGame(){
+function PlayGame(choice){
     let computerChoice=getComputerChoice();
-    result.textContent=playRound(this.classList[0],computerChoice); //Accesa a una vatiable global para poder devolver el resultado
-  
+    let resultText=playRound(choice.classList[0],computerChoice)
+    result.textContent=resultText; //Accesa a una variable global para poder devolver el resultado
+    resultText.includes('Win') ? userWin+=1 : !resultText.includes('Draw') ? computerWin+=1: '' ;
+
 }
 
 const choices=document.querySelectorAll('button');
 const result=document.querySelector('.result');
+let gameCount=0;
+let userWin=0;
+let computerWin=0;
 
 
-choices.forEach(choice => choice.addEventListener('click',PlayGame));
+
+choices.forEach(choice => choice.addEventListener('click',()=>{
+    gameCount+=1;
+    PlayGame(choice);
+    console.log(gameCount);
+    if((userWin+computerWin)===5){
+        console.log("Game over");
+        console.log(`user wins= ${userWin}`);
+        console.log(`computer wins= ${computerWin}`);
+    };
+    
+}));
+
+
+
+
+
