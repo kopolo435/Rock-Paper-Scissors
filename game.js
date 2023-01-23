@@ -65,6 +65,8 @@ function PlayGame(choice){
 
 const choices=document.querySelectorAll('button');
 const result=document.querySelector('.result');
+const textComputerWin=document.querySelector('.computerWins .text');
+const textUserWin=document.querySelector('.userWins .text');
 let gameCount=0;
 let userWin=0;
 let computerWin=0;
@@ -75,6 +77,8 @@ choices.forEach(choice => choice.addEventListener('click',()=>{
     gameCount+=1;
     PlayGame(choice);
     console.log(gameCount);
+    textUserWin.textContent=userWin;
+    textComputerWin.textContent=computerWin;
     if((userWin+computerWin)===5){
         console.log("Game over");
         console.log(`user wins= ${userWin}`);
