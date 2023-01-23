@@ -13,10 +13,10 @@ main{
 
 .resultContainer{
     display: flex;
-    justify-content: center;
     width: 500px;
     margin: 30px;
     border: 2px solid #000000;
+    padding: 8px;
     gap: 8px;
 }
 
@@ -33,6 +33,10 @@ main{
     padding: 8px;
     
     
+}
+
+.userWins, .computerWins{
+    gap: 2px;
 }
 
 .dividedResults p{
