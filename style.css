@@ -19,3 +19,22 @@ main{
     border: 2px solid #000000;
     gap: 8px;
 }
+
+.dividedResults{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.dividedResults div{
+    display: flex;
+    border: 2px solid black;
+    padding: 8px;
+    
+    
+}
+
+.dividedResults p{
+    margin: 0px;
+}
