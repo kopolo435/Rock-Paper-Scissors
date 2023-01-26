@@ -5,11 +5,38 @@ main{
     align-items: center;
 }
 
+body{
+    background-color: #d4f4da;
+}
+
+header{
+    text-align: center;
+}
+
+#gonKillua{
+    width: 30%;
+    margin: 1em;
+}
+
 .choices{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
+    height: 90%;
 }
+
+.rock,.paper,.scissors{
+    width: 20%;
+    margin: 1em;
+}
+
+
+.rock img,.paper img,.scissors img{
+    width: 100%;
+    height: 15vh;
+}
+
 
 .resultContainer{
     display: flex;
